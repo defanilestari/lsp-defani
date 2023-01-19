@@ -105,7 +105,7 @@ class KelasController extends Controller
      */
     public function destroy(Kelas $kelas)
     {
-        //
+        
         $siswa = Siswa::where('kelas_id', $kelas->id)->first();
         $mengajar = Mengajar::where('kelas_id', $kelas->id)->first();
 
@@ -120,6 +120,6 @@ class KelasController extends Controller
 
         $kelas->delete();
 
-        return back()->with('success', "Data Kelas Berhasil di Tambah");
+        return back()->with('success', "Data Kelas Berhasil di Hapus");
     }
 }

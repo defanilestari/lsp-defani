@@ -16,6 +16,6 @@ class Nilai extends Model
         return $this->belongsTo(Mengajar::class, 'mengajar_id','id');
     }
     public function siswa (){
-        return $this->belongsTo(Siswa::class, 'kelas_id','id');
+        return $this->belongsTo(Siswa::class, 'siswa_id','id');
     }
 }
